@@ -1,5 +1,7 @@
 This is a blank Ionic2 application to test integration with branch.io.
 
+To test in a browser: ionic cordova run browser
+
 # Functionality
 
 Step 1:
@@ -20,8 +22,8 @@ Step 2:
 
 The last step is expected to work correctly in following cases:
 
-* App is freshly installed from referral URL: resolve_deeplink() returns text
-* App is launched via referral URL: resolve_deeplink() returns text from that URL
-* App is manually launched: resolve_deeplink() returns nothing
+* App is freshly installed from referral URL: get_deeplink_payload() returns payload text
+* App is launched via referral URL: get_deeplink_payload() returns text from that URL
+* App is manually launched: get_deeplink_payload() returns nothing
 
 For deeplink to be resolved correctly in case of fresh install app needs to be deployed in real appstores.
