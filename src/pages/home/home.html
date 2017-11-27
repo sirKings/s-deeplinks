@@ -7,19 +7,15 @@
 </ion-header>
 
 <ion-content padding>
-  <form (ngSubmit)="share()">
+ <h5>Received Deeplink Payload: <br> {{received_deeplink_payload}} </h5> 
+
+  <form [formGroup]="form" (ngSubmit)="share()">
     <ion-item>
-      <ion-label>Received Deeplink Payload:</ion-label>
-      <ion-input type="text" [(ngModel)]="received_deeplink_payload" name="received_deeplink_payload" [readonly]="true"></ion-input>      
-    </ion-item>
-    <ion-item>
-      <ion-label>Deeplink Payload to Share:</ion-label>
-      <ion-input type="text" [(ngModel)]="deeplink_payload_to_share" name="deeplink_payload_to_share"></ion-input>
+      <ion-label floating>Deeplink Payload to Share:</ion-label>
+      <ion-input type="text" formControlName ="deeplink_payload_to_share"></ion-input>
     </ion-item>
     <button ion-button type="submit" block>Share</button>
-    <ion-item>
-      <ion-label>Deeplink to Share:</ion-label>
-      <ion-input type="text" [(ngModel)]="deeplink_url" name="deeplink_url" [readonly]="true"></ion-input>      
-    </ion-item>
+    <p>Deeplink to Share:<br> {{deeplink_url}}</p>
   </form>
+
 </ion-content>
