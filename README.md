@@ -27,3 +27,7 @@ The last step is expected to work correctly in following cases:
 * App is manually launched: get_deeplink_payload() returns nothing
 
 For deeplink to be resolved correctly in case of fresh install app needs to be deployed in real appstores.
+
+
+Check the config.xml file. The branch.io sdk was added and <branch-config> tag was added too. The information can be found on your branch.io dashboard. You will need to update that. 
+
